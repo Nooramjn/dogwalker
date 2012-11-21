@@ -1,4 +1,12 @@
 Dogwalker::Application.routes.draw do
+  get "staticpages/home"
+
+  get "staticpages/about_us"
+
+  get "staticpages/contact_us"
+
+  get "staticpages/privacy_policy"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,7 +56,7 @@ Dogwalker::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'staticpages#home'
 
   # See how all your routes lay out with "rake routes"
 
