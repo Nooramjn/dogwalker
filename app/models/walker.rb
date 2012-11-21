@@ -2,7 +2,7 @@ class Walker < ActiveRecord::Base
 
 attr_accessible :id, :firstname, :lastname, :phone, :email, :description
 
-before_save :format_phone
+#before_save :format_phone
 
 has_many :messages
 

@@ -1,6 +1,66 @@
 <h1>Listing walkers</h1>
 
+
+
 <table>
+<tr>
+<th>First Name</th>
+<th>Last Name</th>
+<th>Phone</th>
+<th>Description</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+<tr>
+<td>Sara</td>
+<td>AlMulla</td>
+<td>9746655448</td>
+<td>Hi</td>
+<th><a href="http://0.0.0.0:3000/messages/new">Contact Me</a></th>
+
+</tr>
+<tr>
+<td>Ali</td>
+<td>Rashid</td>
+<td>9745577886</td>
+<td>Hi</td>
+<th><a href="http://0.0.0.0:3000/messages/new">Contact Me</a></th>
+
+</tr>
+
+<% @walkers.each do |walker| %>
+  <tr>
+	
+    <td><%= walker.firstname %></td>
+    <td><%= walker.lastname %></td>
+    <td><%= walker.phone %></td>
+    <td><%= walker.description %></td>
+    <td><%= link_to 'Contact Me', new_message_path %></td>
+    <td><%= link_to 'Show', walker %></td>
+    <td><%= link_to 'Edit', edit_walker_path(walker) %></td>
+    <td><%= link_to 'Destroy', walker, confirm: 'Are you sure?', method: :delete %></td>
+
+  </tr>
+<% end %>
+
+
+
+
+
+</table>
+
+
+
+
+
+
+
+
+
+<!--<table>
   <tr>
     <th>Firstname</th>
     <th>Lastname</th>
@@ -13,6 +73,7 @@
 
 <% @walkers.each do |walker| %>
   <tr>
+	
     <td><%= walker.firstname %></td>
     <td><%= walker.lastname %></td>
     <td><%= walker.phone %></td>
@@ -24,7 +85,9 @@
 
   </tr>
 <% end %>
-</table>
+</table>-->
+
+
 
 <br />
 
