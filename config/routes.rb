@@ -1,4 +1,8 @@
 Dogwalker::Application.routes.draw do
+  resources :messages
+
+  resources :walkers
+
   get "staticpages/home"
 
   get "staticpages/about_us"

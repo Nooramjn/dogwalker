@@ -1,0 +1,31 @@
+<h1>Listing walkers</h1>
+
+<table>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Phone</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @walkers.each do |walker| %>
+  <tr>
+    <td><%= walker.firstname %></td>
+    <td><%= walker.lastname %></td>
+    <td><%= walker.phone %></td>
+    <td><%= walker.description %></td>
+    <td><%= link_to 'Show', walker %></td>
+    <td><%= link_to 'Edit', edit_walker_path(walker) %></td>
+    <td><%= link_to 'Destroy', walker, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Contact Me', new_message_path %></td>
+
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Walker', new_walker_path %>
