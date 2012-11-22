@@ -14,4 +14,5 @@ class StaticpagesController < ApplicationController
   def privacy_policy
   @title = "Privacy Policy"
   end
+  
 end
