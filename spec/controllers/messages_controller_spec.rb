@@ -24,7 +24,9 @@ describe MessagesController do
   # Message. As you add validations to Message, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    { "date" => "2012-11-21" }
+    { :walker_id => 1, :date => 2.days.ago, :subject =>"dog walking", :sendername =>"Sara",
+    :content =>"dog walker is needed!"
+    }
   end
 
   # This should return the minimal set of values that should be in the session

@@ -24,7 +24,7 @@ describe WalkersController do
   # Walker. As you add validations to Walker, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    { "firstname" => "MyString" }
+    { :firstname => "Noora", :lastname => "AlMaslamani", :phone => "97455566622"}
   end
 
   # This should return the minimal set of values that should be in the session
