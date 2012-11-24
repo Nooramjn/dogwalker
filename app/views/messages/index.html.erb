@@ -18,7 +18,7 @@
     <td><%= message.subject %></td>
     <td><%= message.sendername %></td>
     <!-- <td><%= message.content %></td> -->
-    <td><%= message.walker_id %></td>
+    <td><%= message.walker.name %></td>
     <td><%= link_to 'Show', message %></td>
     <td><%= link_to 'Edit', edit_message_path(message) %></td>
     <td><%= link_to 'Destroy', message, confirm: 'Are you sure?', method: :delete %></td>
