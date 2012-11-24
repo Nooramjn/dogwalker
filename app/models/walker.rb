@@ -1,5 +1,5 @@
 class Walker < ActiveRecord::Base
-#I removed the :id because it is there automatically
+
 attr_accessible :firstname, :lastname, :phone, :description
 
 before_save :format_phone
