@@ -6,11 +6,51 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <link rel="stylesheet" type="text/css" href="application.css" />
 </head>
-<body>
+	<body>
+		<div id="wrapper">
 
-<%= yield %>
-<%= render 'layouts/footer' %>
+			<%= render 'layouts/header' %>
+
+			
+			<div id="page">
+				<div id="content">
+					<!-- <div class="post">
+						<h2>Welcome to Dog Walker</h2>
+						<p>
+							This is <strong>Dog Walker</strong>, a website where you can schedule a time for you dog to take a walk						</p>
+					</div>
+--> 
+
+					<%= yield %>
+					<!-- <div class="post post-last">
+						<h3>Under this is the menu </h3>
+						<p>
+							We can write more here
+						</p>
+						<ul class="list">
+							<li class="first"><a href="#">Elementum aliquam orci primis vestibulum enim blandit</a></li>
+							<li><a href="#">Magnis arcu vestibulum viverra luctus leo suspendisse</a></li>
+							<li><a href="#">Volutpat diam fusce cursus luctus malesuada enim nulla</a></li>
+							<li><a href="#">Quisque arcu sit in faucibus tellus accumsan</a></li>
+							<li class="last"><a href="#">Erat congue iaculis quam cursus feugiat proin odio</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	--> 
+		<div id="footer">
+			<!-- &copy; 2012 Untitled | Design by <a href="http://www.freecsstemplates.org/">FCT</a> | Images by <a href="http://fotogrph.com/">Fotogrph</a> --> 
+
+			
+
+			<%= render 'layouts/footer' %>
+
+		</div>
+
 
 
 </body>
