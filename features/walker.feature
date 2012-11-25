@@ -15,17 +15,17 @@ Scenario: Do not see the default rails page
 	  	
 Scenario: View 'About Us'
 	Given I go to the home page
-	When I follow the "About Us" link in the "div#header"
+	When I follow the "About Us" link
 	Then I should see "Dog Walkers :: About Us" in the "title"
 	
 Scenario: View 'Contact Us'
 	Given I go to the home page
-	When I follow the "Contact Us" link
+	When I follow the "Contact Us" link in the "div#menu"
 	Then I should see "Dog Walkers :: Contact Us" in the "title"
 	
 Scenario: View 'Privacy Policy'
 	Given I go to the home page
-	When I follow the "Privacy Policy" link
+	When I follow the "Privacy Policy" link in the "div#menu"
 	Then I should see "Dog Walkers :: Privacy Policy" in the "title"
 	
 Scenario: View webmaster information in footer
