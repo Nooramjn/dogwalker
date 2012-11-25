@@ -15,17 +15,17 @@ Scenario: Do not see the default rails page
 	  	
 Scenario: View 'About Us'
 	Given I go to the home page
-	When I follow the "About Us" link
+	When I follow the "About Us" link in the "header"
 	Then I should see "Dog Walkers :: About Us" in the "title"
 	
 Scenario: View 'Contact Us'
 	Given I go to the home page
-	When I follow the "Contact Us" link in the "div#menu"
+	When I follow the "Contact Us" link in the "header"
 	Then I should see "Dog Walkers :: Contact Us" in the "title"
 	
 Scenario: View 'Privacy Policy'
 	Given I go to the home page
-	When I follow the "Privacy Policy" link in the "div#menu"
+	When I follow the "Privacy Policy" link in the "header"
 	Then I should see "Dog Walkers :: Privacy Policy" in the "title"
 	
 Scenario: View webmaster information in footer
@@ -92,6 +92,11 @@ Scenario: Delete walker
     Given I am on the 'walkers' page
     When I follow the "Destroy" link for "Sarah"
     Then I should not see "Sarah"
+
+Scenario: Contact a walker
+	Given I am on the 'walkers' page
+	When I follow the "Contact Me" link for "Sarah"
+  	Then I should see "New Message" in the "h1"
 
  Scenario: List Messages
   Given I am on the 'messages' page
