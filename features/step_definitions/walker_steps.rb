@@ -26,10 +26,16 @@ When /^I follow the "(.*?)" link$/ do |arg1|
 click_link arg1
 end
 
-When /^I follow the "(.*?)" link in the "(.*?)"$/ do |csstag, value|
-within('div', :text => csstag) do
-      find('a', :text => value).click
+When /^I follow the "(.*?)" link in the "(.*?)"$/ do |value, csstag|
+within('header', :text => value) do
+     find('a', :text => csstag).click
 end
+end
+
+When /^I follow the "(.*?)" link in the header$/ do |value|
+
+page.should have_link value
+click_link value
 end
 
 
@@ -38,7 +44,7 @@ Then /^I should see "(.*?)" in the "(.*?)"$/ do |output, tagname|
 end
 
 Given /^I am on the 'about us' page$/ do
-visit staticpages_about_us_pathend
+visit staticpages_about_us_path
 end
 
 Given /^I am on the 'contact us' page$/ do
