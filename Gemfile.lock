@@ -73,6 +73,7 @@ GEM
     ffi (1.2.0)
     gherkin (2.11.5)
       json (>= 1.4.6)
+    gravatar-ultimate (1.0.3)
     heroku (2.33.1)
       heroku-api (~> 0.3.6)
       launchy (>= 0.3.2)
@@ -185,6 +186,7 @@ DEPENDENCIES
   cucumber-rails (>= 1.2.1)
   database_cleaner
   factory_girl_rails (>= 1.6.0)
+  gravatar-ultimate
   heroku
   jquery-rails
   launchy
