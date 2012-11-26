@@ -2,6 +2,7 @@ class MessagesController < ApplicationController
   # GET /messages
   # GET /messages.json
   def index
+  @title = "Messages"
     @messages = Message.all
 
     respond_to do |format|

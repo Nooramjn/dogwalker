@@ -2,7 +2,7 @@ class WalkersController < ApplicationController
   # GET /walkers
   # GET /walkers.json
   def index
-  
+  @title = "Walkers"
     @walkers = Walker.all
 
     respond_to do |format|
